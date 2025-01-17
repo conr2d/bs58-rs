@@ -351,7 +351,7 @@ impl<'a, I: AsRef<[u8]>> DecodeBuilder<'a, I> {
 /// For `const` compatibility we are restricted to using a concrete input and output type, as
 /// `const` trait implementations and `&mut` are unstable. These methods will eventually be
 /// deprecated once the primary interfaces can be converted into `const fn` directly.
-impl<'a, 'b> DecodeBuilder<'a, &'b [u8]> {
+impl DecodeBuilder<'_, &[u8]> {
     /// Decode into a new array.
     ///
     /// Returns the decoded array as bytes.
