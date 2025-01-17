@@ -74,7 +74,7 @@
 //! bs58::decode("he11owor1d").onto(&mut decoded)?;
 //! bs58::encode(decoded).onto(&mut encoded)?;
 //! assert_eq!("he11owor1d", encoded);
-//! # Ok::<(), Box<dyn std::error::Error>>(())
+//! # Ok::<(), Box<dyn core::error::Error>>(())
 //! ```
 
 #[cfg(feature = "std")]

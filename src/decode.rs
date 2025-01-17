@@ -603,8 +603,7 @@ const fn decode_into_const<const N: usize>(input: &[u8], alpha: &Alphabet) -> Re
     Ok(output)
 }
 
-#[cfg(feature = "std")]
-impl std::error::Error for Error {}
+impl core::error::Error for Error {}
 
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

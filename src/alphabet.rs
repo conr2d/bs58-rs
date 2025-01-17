@@ -77,7 +77,7 @@ impl Alphabet {
     ///     .into_string();
     ///
     /// assert_eq!("#ERRN)N RD", encoded);
-    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// # Ok::<(), Box<dyn core::error::Error>>(())
     /// ```
     /// ## Errors
     ///
@@ -140,7 +140,7 @@ impl Alphabet {
     ///     .into_string();
     ///
     /// assert_eq!("#ERRN)N RD", encoded);
-    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// # Ok::<(), Box<dyn core::error::Error>>(())
     /// ```
     ///
     /// If your alphabet is inconsistent then this will fail to compile in a `const` context:
@@ -170,8 +170,7 @@ impl fmt::Debug for Alphabet {
     }
 }
 
-#[cfg(feature = "std")]
-impl std::error::Error for Error {}
+impl core::error::Error for Error {}
 
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
